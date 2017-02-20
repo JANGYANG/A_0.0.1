@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/colorWhite"
+    tools:context="com.brokeneye.a_001.LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/UserID"
+                android:textColor="@color/colorBlack"
+                android:textSize="15dp"
+                android:layout_marginBottom="10dp"/>
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/idText_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/UserID"
+                android:textColorHint="@color/colorGrey"
+                android:maxLines="1"
+                android:textSize="20dp"
+                android:background="@color/colorSubWhite"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Password"
+                android:textColor="@color/colorBlack"
+                android:textSize="15dp"/>
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/passwordText_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="@string/Password"
+                android:textColorHint="@color/colorGrey"
+                android:background="@color/colorSubWhite"
+                android:textSize="20dp"
+                android:paddingLeft="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/PasswordConfirm"
+                android:textColor="@color/colorBlack"
+                android:textSize="15dp"/>
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/passwordText_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="@string/Password"
+                android:textColorHint="@color/colorGrey"
+                android:background="@color/colorSubWhite"
+                android:textSize="20dp"
+                android:paddingLeft="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/NamePerson"
+                android:textColor="@color/colorBlack"
+                android:textSize="15dp"/>
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/name_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="@string/NamePerson"
+                android:textColorHint="@color/colorGrey"
+                android:background="@color/colorSubWhite"
+                android:textSize="20dp"
+                android:paddingLeft="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/BirthPerson"
+                android:textColor="@color/colorBlack"
+                android:textSize="15dp"/>
+
+            <DatePicker
+                android:id="@+id/datePicker_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:layout_gravity="center"
+                >
+            </DatePicker>
+
+
+            <Button
+                android:id="@+id/registerButton_register"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Register"
+                android:textColor="@color/colorWhite"
+                android:background="@color/colorMain"/>
+
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

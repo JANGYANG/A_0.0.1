@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">A_0.0.1</string>
+    <string name="UserID">User ID</string>
+    <string name="Password">Password</string>
+    <string name="PasswordConfirm">Password Confirm</string>
+    <string name="Login">Login</string>
+    <string name="Forgot">Forgot ID or Password?</string>
+    <string name="Register">Register</string>
+    <string name="NamePerson">Name</string>
+    <string name="BirthPerson">Birth</string>
+
+    <string name="UserIDConfirm_toast">Please, Check UserID</string>
+    <string name="PasswordConfirm_toast">Please, Confirm Password</string>
+    <string name="UserNameConfirm_toast">Please, Check Username</string>
+</resources>
