@@ -5,9 +5,10 @@
               android:layout_height="match_parent">
 
 
-    <TextView
+    <ListView
+        android:id="@+id/mainlist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HI"/>
+        />
 
 </LinearLayout>
