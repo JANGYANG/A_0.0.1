@@ -91,6 +91,7 @@
                 />
 
 
+
             <Button
                 android:id="@+id/loginButton"
                 android:layout_width="match_parent"
@@ -99,7 +100,8 @@
                 android:layout_gravity="center"
                 android:text="@string/Login"
                 android:textColor="@color/colorWhite"
-                android:background="@color/colorMain"/>
+                android:background="@color/colorMain"
+                android:onClick="Login"/>
 
         <LinearLayout
             android:layout_width="match_parent"

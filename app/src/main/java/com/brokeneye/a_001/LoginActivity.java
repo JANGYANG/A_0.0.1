@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -54,10 +55,22 @@ public class LoginActivity extends AppCompatActivity {
 
                     @Override
                     public void onResponse(String response) {
+
+                        Log.d("debug", "Response Text: " + response.toString());
+
+                        Log.d("debug","OK");
+
+
                         try{
 
                             JSONObject jsonResponse = new JSONObject(response);
                             boolean success = jsonResponse.getBoolean("success");
+
+                            Log.d("debug", "success = " + success);
+
+                            Log.d("debug","OK");
+
+
                             if(success)
                             {
                                 String userID = jsonResponse.getString("userID");
@@ -81,6 +94,7 @@ public class LoginActivity extends AppCompatActivity {
 
                         }catch(Exception e)
                         {
+                            Log.d("debug","no");
                             e.printStackTrace();
                         }
                     }
@@ -103,4 +117,8 @@ public class LoginActivity extends AppCompatActivity {
         });
 
     }
+
 }
+
+
+
