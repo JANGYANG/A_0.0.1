@@ -33,8 +33,6 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
         ListView mainList;
-        ListView playphotos;
-        playphotos= (ListView)findViewById(R.id.play_photo);
         mainList = (ListView) findViewById(R.id.mainlist);
 
 
@@ -46,13 +44,12 @@ public class MainActivity extends AppCompatActivity {
 
 
         final ListViewAdapter_M adapter_M;
-        final ListViewAdapter adapter_P;
         // Adapter 생성
         adapter_M = new ListViewAdapter_M();
-        adapter_P = new ListViewAdapter();
+
         // 리스트뷰 참조 및 Adapter달기
         mainList.setAdapter(adapter_M);
-        playphotos.setAdapter(adapter_P);
+
     }
 
     static class Finshgame {
@@ -125,43 +122,5 @@ public class MainActivity extends AppCompatActivity {
 
         // 아이템 데이터 추가를 위한 함수. 개발자가 원하는대로 작성 가능.
     }
-    public class ListViewAdapter extends BaseAdapter{
-        @Override
-        public int getCount() {
-            return displaygameimage.size();
-        }
 
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            final int pos =position;
-            final Context context = parent.getContext();
-            // "listview_item" Layout을 inflate하여 convertView 참조 획득.
-            if (convertView == null) {
-                LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                convertView = inflater.inflate(R.layout.playphoto_listlayout, parent, false);
-            }
-
-            // 화면에 표시될 View(Layout이 inflate된)으로부터 위젯에 대한 참조 획득
-            ImageView playphoto = (ImageView) convertView.findViewById(R.id.playphoto);
-
-            // Data Set(listViewItemList)에서 position에 위치한 데이터 참조 획득
-            Integer listViewItem = displaygameimage.get(position);
-
-            // 아이템 내 각 위젯에 데이터 반영
-
-            playphoto.setImageResource(listViewItem);
-
-            return convertView;
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return position;
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return displaygameimage.size();
-        }
-    }
 }
