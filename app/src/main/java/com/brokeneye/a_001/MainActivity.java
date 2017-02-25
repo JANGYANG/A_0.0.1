@@ -1,20 +1,29 @@
 package com.brokeneye.a_001;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.view.menu.ListMenuItemView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.zip.Inflater;
 
 import static android.R.id.list;
 
@@ -22,7 +31,7 @@ import static android.R.id.list;
  * Created by a007 on 2017. 2. 6..
  */
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
 
     static ArrayList<Finshgame> displaygame = new ArrayList<>();
     static ArrayList<Integer> displaygameimage=new ArrayList<>();
@@ -34,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ListView mainList;
         mainList = (ListView) findViewById(R.id.mainlist);
+
+
 
 
         displaygame.add(new Finshgame(R.drawable.logo512,R.drawable.logo512,"희융이네","우경이네","1","1"));
@@ -50,7 +61,44 @@ public class MainActivity extends AppCompatActivity {
         // 리스트뷰 참조 및 Adapter달기
         mainList.setAdapter(adapter_M);
 
+
+        mainList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(MainActivity.this, "경기 자세히 보기", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
+
+
+
+        //툴바 사용시 필요
+
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "매칭신청하기", Toast.LENGTH_SHORT).show();
+
+                /*
+                //snackbar 토스트의 바의 상위버전 , setAction" 버튼이름", new onclickListener
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", new View.OnClickListener() {
+                            @Override
+                           public void onClick(View v) {
+                                Toast.makeText(MainActivity.this, "hi", Toast.LENGTH_SHORT).show();
+                            }
+                        }).show();*/
+            }
+        });
+
     }
+
+
+
+
+
 
     static class Finshgame {
         int TeamLogo1;
