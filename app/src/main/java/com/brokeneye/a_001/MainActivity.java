@@ -7,7 +7,11 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.view.menu.ListMenuItemView;
 import android.support.v7.widget.Toolbar;
@@ -35,9 +39,10 @@ public class MainActivity extends AppCompatActivity  {
 
     static ArrayList<Finshgame> displaygame = new ArrayList<>();
     static ArrayList<Integer> displaygameimage=new ArrayList<>();
-
+    private SectionsPagerAdapter mSectionsPagerAdapter;
+    private ViewPager mViewPager;
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
@@ -54,22 +59,23 @@ public class MainActivity extends AppCompatActivity  {
         displaygameimage.add(R.drawable.logo512);
 
 
-        final ListViewAdapter_M adapter_M;
+       /*  final ListViewAdapter adapter;
         // Adapter 생성
-        adapter_M = new ListViewAdapter_M();
+        adapter = new ListViewAdapter();
 
         // 리스트뷰 참조 및 Adapter달기
-        mainList.setAdapter(adapter_M);
+        mainList.setAdapter(adapter);
+*/
 
 
-        mainList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(MainActivity.this, "경기 자세히 보기", Toast.LENGTH_SHORT).show();
-                return false;
-            }
-        });
+        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
+        // Set up the ViewPager with the sections adapter.
+        mViewPager = (ViewPager) findViewById(R.id.container);
+        mViewPager.setAdapter(mSectionsPagerAdapter);
+
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(mViewPager);
 
 
         //툴바 사용시 필요
@@ -80,7 +86,7 @@ public class MainActivity extends AppCompatActivity  {
             @Override
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this, "매칭신청하기", Toast.LENGTH_SHORT).show();
-
+                startActivity(new Intent(getBaseContext(),MatchingPage.class));
                 /*
                 //snackbar 토스트의 바의 상위버전 , setAction" 버튼이름", new onclickListener
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
@@ -114,61 +120,56 @@ public class MainActivity extends AppCompatActivity  {
         }
     }
 
-    public class ListViewAdapter_M extends BaseAdapter {
 
 
-        // Adapter에 사용되는 데이터의 개수를 리턴. : 필수 구현
-        @Override
-        public int getCount() {
-            return displaygame.size();
-        }
+}
 
-        // position에 위치한 데이터를 화면에 출력하는데 사용될 View를 리턴. : 필수 구현
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            final int pos = position;
-            final Context context = parent.getContext();
+class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-            // "listview_item" Layout을 inflate하여 convertView 참조 획득.
-            if (convertView == null) {
-                LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                convertView = inflater.inflate(R.layout.play_listlayout, parent, false);
-            }
-
-            // 화면에 표시될 View(Layout이 inflate된)으로부터 위젯에 대한 참조 획득
-            ImageView Team_logo1 = (ImageView) convertView.findViewById(R.id.Team_logo1);
-            ImageView Team_logo2 = (ImageView) convertView.findViewById(R.id.Team_logo2);
-            TextView Team_name1 = (TextView) convertView.findViewById(R.id.Team_name1);
-            TextView Team_name2 = (TextView) convertView.findViewById(R.id.Team_name2);
-            TextView Team_score1 = (TextView) convertView.findViewById(R.id.Team_Score1);
-            TextView Team_score2 = (TextView) convertView.findViewById(R.id.Team_Score2);
-            // Data Set(listViewItemList)에서 position에 위치한 데이터 참조 획득
-            Finshgame listViewItem = displaygame.get(position);
-
-            // 아이템 내 각 위젯에 데이터 반영
-
-            Team_logo1.setImageResource(listViewItem.TeamLogo1);
-            Team_logo2.setImageResource(listViewItem.TeamLogo2);
-            Team_name1.setText(listViewItem.TeamName1);
-            Team_name2.setText(listViewItem.TeamName2);
-            Team_score1.setText(listViewItem.TeamScore1);
-            Team_score2.setText(listViewItem.TeamScore2);
-
-            return convertView;
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return position;
-        }
-
-        // 지정한 위치(position)에 있는 데이터 리턴 : 필수 구현
-        @Override
-        public Object getItem(int position) {
-            return displaygame.get(position);
-        }
-
-        // 아이템 데이터 추가를 위한 함수. 개발자가 원하는대로 작성 가능.
+    public SectionsPagerAdapter(FragmentManager fm) {
+        super(fm);
     }
 
+    @Override
+    public Fragment getItem(int position) {
+
+        switch (position) {
+            case 0:
+                MainpageActivity tab1=new MainpageActivity();
+                return tab1;
+            //여기 에러를 어떻게 처리할까요?
+
+            case 1:
+                tab1Activity tab2=new tab1Activity();
+                return tab2;
+            case 2:
+                tab2Activity tab3=new tab2Activity();
+                return tab3;
+            case 3:
+                tab3Activity tab4=new tab3Activity();
+                return tab4;
+        }
+        return null;
+    }
+
+    @Override
+    public int getCount() {
+        // Show 3 total pages.
+        return 4;
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        switch (position) {
+            case 0:
+                return "main_page";
+            case 1:
+                return "tab1page";
+            case 2:
+                return "tab2page";
+            case 3:
+                return "tab3page";
+        }
+        return null;
+    }
 }
