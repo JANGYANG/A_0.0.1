@@ -1,4 +1,4 @@
-package com.brokeneye.a_001;
+package com.brokeneye.a_001.Register;
 
 import android.app.AlertDialog;
 import android.os.Bundle;
@@ -13,14 +13,10 @@ import android.widget.Toast;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
+import com.brokeneye.a_001.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-
-import static android.app.AlertDialog.*;
 
 /**
  * Created by a007 on 2017. 2. 6..

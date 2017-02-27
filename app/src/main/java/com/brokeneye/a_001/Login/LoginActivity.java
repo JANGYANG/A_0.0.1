@@ -1,5 +1,6 @@
-package com.brokeneye.a_001;
+package com.brokeneye.a_001.Login;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +15,9 @@ import android.widget.TextView;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
+import com.brokeneye.a_001.MainActivity;
+import com.brokeneye.a_001.R;
+import com.brokeneye.a_001.Register.RegisterActivity;
 
 import org.json.JSONObject;
 

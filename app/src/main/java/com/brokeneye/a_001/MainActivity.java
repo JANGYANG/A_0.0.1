@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity  {
 
 
 
+
+
         displaygame.add(new Finshgame(R.drawable.logo512,R.drawable.logo512,"희융이네","우경이네","1","1"));
         displaygame.add(new Finshgame(R.drawable.logo512,R.drawable.logo512,"희융이네","우경이네","1","1"));
         displaygameimage.add(R.drawable.logo512);
