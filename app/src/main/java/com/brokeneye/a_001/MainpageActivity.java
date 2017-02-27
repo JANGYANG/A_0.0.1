@@ -3,6 +3,7 @@ package com.brokeneye.a_001;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.zip.Inflater;
 
 /**
  * Created by gmldb on 2017-02-27.
@@ -38,16 +41,16 @@ public class MainpageActivity extends Fragment {
         mainList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-               /* Snackbar.make(view, "경기를 자세히 보시겠습니까?", Snackbar.LENGTH_LONG)
+               Snackbar.make(view, "경기를 자세히 보시겠습니까?", Snackbar.LENGTH_LONG)
                         .setAction("네", new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
                                 startActivity(new Intent(getContext(), List_playimage.class));
                             }
-                        }).show();*/
-
-                Toast.makeText(getContext(), "경기 자세히 보기", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(rootView.getContext(), List_playimage.class));
+                        }).show();
+//질문할것
+                /*Toast.makeText(getContext(), "경기 자세히 보기", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(rootView.getContext(), List_playimage.class));*/
                 return false;
 
             }
