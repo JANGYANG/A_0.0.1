@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -74,15 +75,16 @@ public class MainActivity extends AppCompatActivity  {
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this, "매칭신청하기", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getBaseContext(),MatchingPage.class));
-                /*
+
                 //snackbar 토스트의 바의 상위버전 , setAction" 버튼이름", new onclickListener
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+               /* Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", new View.OnClickListener() {
                             @Override
                            public void onClick(View v) {
                                 Toast.makeText(MainActivity.this, "hi", Toast.LENGTH_SHORT).show();
                             }
-                        }).show();*/
+                        }).show();
+                        */
             }
         });
 

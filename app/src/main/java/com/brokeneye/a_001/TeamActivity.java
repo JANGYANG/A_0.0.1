@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 public class TeamActivity extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.activity_Team, container, false);
+        View rootView = inflater.inflate(R.layout.activity_team, container, false);
 
         return rootView;
     }
