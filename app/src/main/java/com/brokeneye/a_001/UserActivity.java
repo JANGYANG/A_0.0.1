@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 public class UserActivity extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.activity_User, container, false);
+        View rootView = inflater.inflate(R.layout.activity_user, container, false);
 
         return rootView;
     }
