@@ -2,7 +2,9 @@ package com.brokeneye.a_001;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,38 +19,25 @@ import android.widget.Toast;
  * Created by gmldb on 2017-02-24.
  */
 
-public class List_playimage extends Fragment {
+public class List_playimage extends AppCompatActivity {
 
 
    ListView playImage_List;
 
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.playphoto_list, container, false);
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.playphoto_list);
 
-
-
-        playImage_List = (ListView) rootView.findViewById(R.id.playImage_List);
-
-
+        playImage_List = (ListView) findViewById(R.id.playImage_List);
         final ListViewAdapter adapter= new ListViewAdapter();
         // Adapter 생성
 
 
         // 리스트뷰 참조 및 Adapter달기
         playImage_List.setAdapter(adapter);
-
-        playImage_List.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getContext(), "경기 자세히 보기", Toast.LENGTH_SHORT).show();
-                return false;
-            }
-        });
-
-        return rootView;
     }
-
+}
     class ListViewAdapter extends BaseAdapter {
 
 
@@ -95,6 +84,6 @@ public class List_playimage extends Fragment {
         // 아이템 데이터 추가를 위한 함수. 개발자가 원하는대로 작성 가능.
     }
 
-}
+
 
 
