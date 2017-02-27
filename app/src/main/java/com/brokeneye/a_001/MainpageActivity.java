@@ -47,7 +47,7 @@ public class MainpageActivity extends Fragment {
                         }).show();*/
 
                 Toast.makeText(getContext(), "경기 자세히 보기", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getContext(), List_playimage.class));
+                startActivity(new Intent(rootView.getContext(), List_playimage.class));
                 return false;
 
             }

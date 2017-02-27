@@ -10,10 +10,10 @@ import android.view.ViewGroup;
  * Created by gmldb on 2017-02-25.
  */
 
-public class tab2Activity extends Fragment{
+public class TeamActivity extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment2, container, false);
+        View rootView = inflater.inflate(R.layout.activity_Team, container, false);
 
         return rootView;
     }

@@ -1,35 +1,20 @@
 package com.brokeneye.a_001;
 
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.view.menu.ListMenuItemView;
-import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.BaseAdapter;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.zip.Inflater;
-
-import static android.R.id.list;
 
 /**
  * Created by a007 on 2017. 2. 6..
@@ -140,10 +125,10 @@ class SectionsPagerAdapter extends FragmentPagerAdapter {
             //여기 에러를 어떻게 처리할까요?
 
             case 1:
-                tab1Activity tab2=new tab1Activity();
+                TeamActivity tab2=new TeamActivity();
                 return tab2;
             case 2:
-                tab2Activity tab3=new tab2Activity();
+                UserActivity tab3=new UserActivity();
                 return tab3;
             case 3:
                 tab3Activity tab4=new tab3Activity();
