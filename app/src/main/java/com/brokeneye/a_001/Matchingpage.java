@@ -2,11 +2,10 @@ package com.brokeneye.a_001;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 
 /**
- * Created by gmldb on 2017-02-27.
+ * Created by a007 on 2017. 2. 27..
  */
 
 public class MatchingPage extends AppCompatActivity {
