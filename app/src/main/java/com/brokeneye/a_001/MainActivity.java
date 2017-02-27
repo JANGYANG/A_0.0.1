@@ -49,7 +49,6 @@ public class MainActivity extends AppCompatActivity  {
         ListView mainList;
         mainList = (ListView) findViewById(R.id.mainlist);
 
-        Test test = new Test(3);
 
 
 
