@@ -11,7 +11,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@color/colorWhite"
-    tools:context="com.brokeneye.a_001.LoginActivity">
+    tools:context="com.brokeneye.a_001.Login.LoginActivity">
 
     <ScrollView
         android:layout_width="match_parent"
