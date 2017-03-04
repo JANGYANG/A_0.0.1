@@ -37,7 +37,7 @@ public class List_playimage extends AppCompatActivity {
         // 리스트뷰 참조 및 Adapter달기
         playImage_List.setAdapter(adapter);
     }
-}
+
     class ListViewAdapter extends BaseAdapter {
 
 
@@ -83,6 +83,8 @@ public class List_playimage extends AppCompatActivity {
 
         // 아이템 데이터 추가를 위한 함수. 개발자가 원하는대로 작성 가능.
     }
+
+}
 
 
 

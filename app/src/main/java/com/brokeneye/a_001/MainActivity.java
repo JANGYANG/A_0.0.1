@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity  {
             @Override
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this, "매칭신청하기", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getBaseContext(),MatchingPage.class));
+                startActivity(new Intent(getBaseContext(),Matchingpage.class));
 
                 //snackbar 토스트의 바의 상위버전 , setAction" 버튼이름", new onclickListener
                /* Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
@@ -108,57 +108,56 @@ public class MainActivity extends AppCompatActivity  {
             //데이터값에서 받는 형으로 쓸것(ex 값의 위치.TeamLogo= TeamLogo1
         }
     }
+    class SectionsPagerAdapter extends FragmentPagerAdapter {
 
+        public SectionsPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+
+            switch (position) {
+                case 0:
+                    MainpageActivity tab1=new MainpageActivity();
+                    return tab1;
+                //여기 에러를 어떻게 처리할까요?
+
+                case 1:
+                    TeamActivity tab2=new TeamActivity();
+                    return tab2;
+                case 2:
+                    UserActivity tab3=new UserActivity();
+                    return tab3;
+                case 3:
+                    tab3Activity tab4=new tab3Activity();
+                    return tab4;
+            }
+            return null;
+        }
+
+        @Override
+        public int getCount() {
+            // Show 3 total pages.
+            return 4;
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            switch (position) {
+                case 0:
+                    return "main_page";
+                case 1:
+                    return "tab1page";
+                case 2:
+                    return "tab2page";
+                case 3:
+                    return "tab3page";
+            }
+            return null;
+        }
+    }
 
 
 }
 
-class SectionsPagerAdapter extends FragmentPagerAdapter {
-
-    public SectionsPagerAdapter(FragmentManager fm) {
-        super(fm);
-    }
-
-    @Override
-    public Fragment getItem(int position) {
-
-        switch (position) {
-            case 0:
-                MainpageActivity tab1=new MainpageActivity();
-                return tab1;
-            //여기 에러를 어떻게 처리할까요?
-
-            case 1:
-                TeamActivity tab2=new TeamActivity();
-                return tab2;
-            case 2:
-                UserActivity tab3=new UserActivity();
-                return tab3;
-            case 3:
-                tab3Activity tab4=new tab3Activity();
-                return tab4;
-        }
-        return null;
-    }
-
-    @Override
-    public int getCount() {
-        // Show 3 total pages.
-        return 4;
-    }
-
-    @Override
-    public CharSequence getPageTitle(int position) {
-        switch (position) {
-            case 0:
-                return "main_page";
-            case 1:
-                return "tab1page";
-            case 2:
-                return "tab2page";
-            case 3:
-                return "tab3page";
-        }
-        return null;
-    }
-}
