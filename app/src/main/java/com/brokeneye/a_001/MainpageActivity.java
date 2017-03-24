@@ -100,7 +100,7 @@ public class MainpageActivity extends Fragment {
             TextView Team_score1 = (TextView) convertView.findViewById(R.id.Team_Score1);
             TextView Team_score2 = (TextView) convertView.findViewById(R.id.Team_Score2);
             // Data Set(listViewItemList)에서 position에 위치한 데이터 참조 획득
-            MainActivity.Finshgame listViewItem = MainActivity.displaygame.get(position);
+            MainActivity.Finishgame listViewItem = MainActivity.displaygame.get(position);
 
             // 아이템 내 각 위젯에 데이터 반영
 

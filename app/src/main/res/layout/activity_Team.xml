@@ -2,11 +2,14 @@
 
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="150dp"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="20dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!---                        프로필                        -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -49,15 +52,54 @@
                 />
         </LinearLayout>
     </LinearLayout>
+
+
+
+    <!--                   나의 팀경기 기록                       -->
+
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="200dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="날짜"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="결과"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="스코어"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="상대팀"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="장소"/>
+        </LinearLayout>
         <ListView
             android:id="@+id/myteam_Record_List"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         </ListView>
     </LinearLayout>
+
+    <!--                   팀랭크 및 개인랭크                      -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -92,6 +134,10 @@
         </LinearLayout>
 
     </LinearLayout>
+
+
+    <!--                   포메이션                      -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

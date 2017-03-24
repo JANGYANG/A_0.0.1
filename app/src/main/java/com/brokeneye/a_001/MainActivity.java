@@ -27,7 +27,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity  {
 
-    static ArrayList<Finshgame> displaygame = new ArrayList<>();
+    static ArrayList<Finishgame> displaygame = new ArrayList<>();
     static ArrayList<Integer> displaygameimage=new ArrayList<>();
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity  {
 
 
 
-        displaygame.add(new Finshgame(R.drawable.logo512,R.drawable.logo512,"희융이네","우경이네","1","1"));
-        displaygame.add(new Finshgame(R.drawable.logo512,R.drawable.logo512,"희융이네","우경이네","1","1"));
+        displaygame.add(new Finishgame(R.drawable.logo512,R.drawable.logo512,"희융이네","우경이네","1","1"));
+        displaygame.add(new Finishgame(R.drawable.logo512,R.drawable.logo512,"희융이네","우경이네","1","1"));
         displaygameimage.add(R.drawable.logo512);
         displaygameimage.add(R.drawable.logo512);
         displaygameimage.add(R.drawable.logo512);
@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity  {
     }
 
 
-    static class Finshgame {
+    static class Finishgame {
         int TeamLogo1;
         int TeamLogo2;
         String TeamName1;
@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity  {
         String TeamScore1;
         String TeamScore2;
 
-        Finshgame(int TeamLogo1, int TeamLogo2, String TeamName1, String TeamName2, String TeamScore1, String TeamScore2) {
+        Finishgame(int TeamLogo1, int TeamLogo2, String TeamName1, String TeamName2, String TeamScore1, String TeamScore2) {
             this.TeamLogo1=TeamLogo1; this.TeamLogo2=TeamLogo2; this.TeamName1=TeamName1; this.TeamName2=TeamName2; this.TeamScore1=TeamScore1; this.TeamScore2=TeamScore2;
             //데이터값에서 받는 형으로 쓸것(ex 값의 위치.TeamLogo= TeamLogo1
         }
