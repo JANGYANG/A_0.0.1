@@ -42,6 +42,10 @@ public class TeamActivity extends Fragment {
         SingleRank = (ListView)rootView.findViewById(R.id.Team_SingleRank_List);
         Formation = (ListView)rootView.findViewById(R.id.Team_Formation_List);
 
+        myteamplay.add(new myteamplay("2017-03-20","승",1,2,R.drawable.logo512,"희융이네","송파구"));
+        myteamrank.add(new teamrank(1,R.drawable.logo512,"희융이네",100));
+        mysinglerank.add(new singlerank(1,"박희융"));
+        myformation.add(new formation(1,"442포메이션"));
         final ListViewAdapter adapter = new ListViewAdapter();
         final ListViewAdapter1 adapter1 = new ListViewAdapter1();
         final ListViewAdapter2 adapter2 = new ListViewAdapter2();
