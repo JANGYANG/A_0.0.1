@@ -4,7 +4,7 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="List_TeamLogo_Size_w">50dp</dimen>
     <dimen name="List_TeamLogo_Size_h">50dp</dimen>
-    <dimen name="List_Score">50dp</dimen>
+    <dimen name="List_Score">10dp</dimen>
     <dimen name="List_Margin">10dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
 </resources>

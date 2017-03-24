@@ -12,14 +12,14 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
     <TextView
-        android:id="@+id/Team_day_record"
+        android:id="@+id/day"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="날짜"
-        android:textSize="50dp"/>
+        android:hint="날짜"
+        android:textSize="10dp"/>
     <TextView
-        android:id="@+id/Team_result_record"
+        android:id="@+id/result"
         android:layout_weight="1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -28,12 +28,12 @@
 
         />
         <TextView
-            android:id="@+id/Team_Score1_record"
+            android:id="@+id/Score1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text="1"
-            android:textSize="50dp"/>
+            android:hint="1"
+            android:textSize="10dp"/>
         <TextView
             android:id="@+id/Team_Score"
             android:layout_width="0dp"
@@ -45,35 +45,35 @@
         />
 
         <TextView
-            android:id="@+id/Team_Score2_record"
+            android:id="@+id/Score2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text="1"
-            android:textSize="50dp"/>
+            android:hint="1"
+            android:textSize="10dp"/>
 
         <ImageView
-            android:id="@+id/Team_logo2"
+            android:id="@+id/logo2"
             android:layout_width="@dimen/List_TeamLogo_Size_w"
             android:layout_height="@dimen/List_TeamLogo_Size_h"
             android:layout_margin="@dimen/List_Margin"
             />
 
         <TextView
-        android:id="@+id/Team_name2_record"
+        android:id="@+id/name2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="팀명2"
-        android:textSize="@dimen/List_Score"
+        android:hint="\???"
+        android:textSize="10dp"
         android:layout_weight="1"
         />
         <TextView
-            android:id="@+id/Team_place_record"
+            android:id="@+id/place"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="장소"
-            android:textSize="50dp"/>
+            android:textSize="10dp"/>
 
 
 

@@ -42,6 +42,10 @@ public class UserActivity extends Fragment{
         final ListViewAdapter adapter = new ListViewAdapter();
         final ListViewAdapter1 adapter1 = new ListViewAdapter1();
         final ListViewAdapter2 adapter2 = new ListViewAdapter2();
+
+        inplay.setAdapter(adapter);
+        player2_tv.setAdapter(adapter1);
+        player1_tv.setAdapter(adapter2);
         return rootView;
     }
 
@@ -116,8 +120,8 @@ public class UserActivity extends Fragment{
 
             day.setText(listViewItem.day);
             result.setText(listViewItem.result);
-            score1.setText(listViewItem.score1);
-            score2.setText(listViewItem.score2);
+            score1.setText(Integer.toString(listViewItem.score1));
+            score2.setText(Integer.toString(listViewItem.score2));
             name.setText(listViewItem.teamname);
             place.setText(listViewItem.place);
             logo.setImageResource(listViewItem.logo);
@@ -132,7 +136,7 @@ public class UserActivity extends Fragment{
             // 지정한 위치(position)에 있는 데이터 리턴 : 필수 구현
             @Override
             public Object getItem(int position) {
-            return TeamActivity.myteamplay.get(position);
+            return TeamActivity.myteamplay_list.get(position);
         }
     }
 
@@ -165,7 +169,7 @@ public class UserActivity extends Fragment{
 
             // 아이템 내 각 위젯에 데이터 반영
 
-            num.setText(listViewItem.number);
+            num.setText(Integer.toString(listViewItem.number));
             name.setText(listViewItem.name);
             ps.setText(listViewItem.postition);
 
@@ -212,7 +216,7 @@ public class UserActivity extends Fragment{
 
             // 아이템 내 각 위젯에 데이터 반영
 
-            num.setText(listViewItem.number);
+            num.setText(Integer.toString(listViewItem.number));
             name.setText(listViewItem.name);
             ps.setText(listViewItem.postition);
 
