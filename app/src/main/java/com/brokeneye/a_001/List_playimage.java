@@ -3,17 +3,13 @@ package com.brokeneye.a_001;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 /**
  * Created by gmldb on 2017-02-24.
@@ -27,7 +23,7 @@ public class List_playimage extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.playphoto_list);
+        setContentView(R.layout.list_playphoto);
 
         playImage_List = (ListView) findViewById(R.id.playImage_List);
         final ListViewAdapter adapter= new ListViewAdapter();
@@ -56,7 +52,7 @@ public class List_playimage extends AppCompatActivity {
             // "listview_item" Layout을 inflate하여 convertView 참조 획득.
             if (convertView == null) {
                 LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                convertView = inflater.inflate(R.layout.playphoto_listlayout, parent, false);
+                convertView = inflater.inflate(R.layout.listlayout_playphoto, parent, false);
             }
 
             // 화면에 표시될 View(Layout이 inflate된)으로부터 위젯에 대한 참조 획득

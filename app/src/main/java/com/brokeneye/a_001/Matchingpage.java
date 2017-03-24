@@ -12,6 +12,6 @@ public class Matchingpage extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.matchpage);
+        setContentView(R.layout.activity_matchpage);
     }
 }

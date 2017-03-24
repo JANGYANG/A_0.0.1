@@ -10,11 +10,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-    <ImageView
-        android:id="@+id/Team_logo1"
-        android:layout_width="@dimen/List_TeamLogo_Size_w"
-        android:layout_height="@dimen/List_TeamLogo_Size_h"
-        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="날짜"/>
     <TextView
         android:id="@+id/Team_name1"
         android:layout_weight="1"

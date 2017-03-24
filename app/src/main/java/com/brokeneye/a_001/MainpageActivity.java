@@ -13,9 +13,9 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.util.zip.Inflater;
+import com.getbase.floatingactionbutton.FloatingActionButton;
+import com.getbase.floatingactionbutton.FloatingActionsMenu;
 
 /**
  * Created by gmldb on 2017-02-27.
@@ -23,20 +23,33 @@ import java.util.zip.Inflater;
 
 public class MainpageActivity extends Fragment {
     ListView mainList;
+    ListView subList;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        final View rootView = inflater.inflate(R.layout.main_list, container, false);
+
+
+
+        final View rootView = inflater.inflate(R.layout.list_main, container, false);
 
         mainList = (ListView) rootView.findViewById(R.id.mainlist);
+        subList = (ListView) rootView.findViewById(R.id.playImage_List);
+        //fab 버튼
+        final FloatingActionsMenu menuMultipleActions = (FloatingActionsMenu) rootView.findViewById(R.id.multiple_actions);
+        final FloatingActionButton actionA=(FloatingActionButton)rootView.findViewById(R.id.action_a);
+        final FloatingActionButton actionB=(FloatingActionButton)rootView.findViewById(R.id.action_b);
+
 
 
         final ListViewAdapter adapter = new ListViewAdapter();
+
+
         // Adapter 생성
 
 
         // 리스트뷰 참조 및 Adapter달기
         mainList.setAdapter(adapter);
+
 
         mainList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
@@ -76,7 +89,7 @@ public class MainpageActivity extends Fragment {
             // "listview_item" Layout을 inflate하여 convertView 참조 획득.
             if (convertView == null) {
                 LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                convertView = inflater.inflate(R.layout.play_listlayout, parent, false);
+                convertView = inflater.inflate(R.layout.listlayout_play, parent, false);
             }
 
             // 화면에 표시될 View(Layout이 inflate된)으로부터 위젯에 대한 참조 획득

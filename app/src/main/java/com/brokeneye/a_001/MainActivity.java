@@ -1,6 +1,8 @@
 package com.brokeneye.a_001;
 
 import android.content.Intent;
+import android.graphics.drawable.ShapeDrawable;
+import android.graphics.drawable.shapes.OvalShape;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -14,6 +16,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.getbase.floatingactionbutton.FloatingActionsMenu;
 
 import java.util.ArrayList;
 
@@ -69,12 +73,15 @@ public class MainActivity extends AppCompatActivity  {
         //툴바 사용시 필요
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
+
+       /* FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this, "매칭신청하기", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getBaseContext(),Matchingpage.class));
+                */
 
                 //snackbar 토스트의 바의 상위버전 , setAction" 버튼이름", new onclickListener
                /* Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
@@ -85,14 +92,21 @@ public class MainActivity extends AppCompatActivity  {
                             }
                         }).show();
                         */
-            }
+        /*    }
         });
+*/
+        //여기 버튼
+
 
     }
 
+    public void Team_button(View view) {
+        Toast.makeText(this, "팀만들기", Toast.LENGTH_SHORT).show();
+    }
 
-
-
+    public void Matching_button(View view) {
+        Toast.makeText(this, "팀매칭하기", Toast.LENGTH_SHORT).show();
+    }
 
 
     static class Finshgame {
@@ -157,6 +171,7 @@ public class MainActivity extends AppCompatActivity  {
             return null;
         }
     }
+
 
 
 }

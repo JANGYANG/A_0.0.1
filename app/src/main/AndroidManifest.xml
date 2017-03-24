@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Login.LoginActivity"
+            android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -25,11 +25,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".Login.LoginActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
         <activity android:name=".Register.RegisterActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"/>
-        <activity android:name=".MatchingPage"
+        <activity android:name=".Matchingpage"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
 
     </application>
