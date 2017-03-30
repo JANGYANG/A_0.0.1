@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/List_Margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <ImageView
+        android:id="@+id/Team_logo1"
+        android:layout_width="@dimen/List_TeamLogo_Size_w"
+        android:layout_height="@dimen/List_TeamLogo_Size_h"
+        />
+    <TextView
+        android:id="@+id/Team_name1"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="팀명1"
+        android:textSize="@dimen/List_Score"
+
+        />
+        <TextView
+            android:id="@+id/Team_Score1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="1"
+            android:textSize="50dp"/>
+        <TextView
+            android:id="@+id/Team_Score"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textSize="@dimen/List_Score"
+            android:layout_weight="0.3"
+
+        />
+
+        <TextView
+            android:id="@+id/Team_Score2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="1"
+            android:textSize="50dp"/>
+    <TextView
+        android:id="@+id/Team_name2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="팀명2"
+        android:textSize="@dimen/List_Score"
+        android:layout_weight="1"
+        />
+
+    <ImageView
+        android:id="@+id/Team_logo2"
+        android:layout_width="@dimen/List_TeamLogo_Size_w"
+        android:layout_height="@dimen/List_TeamLogo_Size_h"
+        android:layout_margin="@dimen/List_Margin"
+        />
+    </LinearLayout>
+
+
+</LinearLayout>
