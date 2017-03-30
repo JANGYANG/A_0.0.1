@@ -56,6 +56,8 @@ public class TeamActivity extends Fragment {
         SingleRank_ListView.setAdapter(adapter2);
         Formation_ListView.setAdapter(adapter3);
 
+
+
         return rootView;
     }
 
